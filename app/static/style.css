@@ -1,0 +1,66 @@
+body {
+    background-color: #000000 !important;
+
+    background: linear-gradient( #E0E2F3, #734EEB, #7CAFEB);
+}
+
+
+.border1 {
+    border-left: #E0E2F3;
+    /*background-color: lightgrey;;*/
+}
+
+a {
+    color: #7A8080;
+}
+
+
+center {
+    text-align: center
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.big {
+    font-size: 25px;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #734EEB;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*.gradienttt{*/
+/*    background-color:linear-gradient(#E0E2F3, #734EEB, #7CAFEB);*/
+/*}*/
