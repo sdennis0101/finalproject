@@ -16,10 +16,7 @@ pip install flask
 
 Code to configure your flask app (run once each time you open a new terminal):
 ```bash
-export FLASK_APP=main.py
-export FLASK_RUN_HOST=0.0.0.0
-export FLASK_RUN_PORT=8080
-export FLASK_DEBUG=1
+
 ```
 
 Code to run flask:
