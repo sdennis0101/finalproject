@@ -49,7 +49,7 @@
         </div>
 
         <div class="col l1 tooltip">
-            <h5><a href="http://www.hyperlinkcode.com/change-hyperlink-color.php" style="color: #7A8080"> Creators </a></h5>
+            <h5><a href="https://best-bank-app.herokuapp.com/creators" style="color: #7A8080"> Creators </a></h5>
         </div>
         <div class="col l2">
 
@@ -66,7 +66,7 @@
             <h2> Are the following things important to you ?</h2>
         </div>
     </div>
-    <form>
+    <form method="post" action="whichBankForYouStocks"> 
     <div align="center" class="row">
         <h3>Banks Prior Experience with Investing?</h3>
     </div>
@@ -78,7 +78,7 @@
             <div align="left" class="col l5 big button">
 
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question1" value = "prevExperienceYes" type="radio" />
             <span class="per"> Yes </span>
       </label>
             </div>
@@ -87,9 +87,10 @@
             </div>
             <div align="left" class="col l5 big button">
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question1" value = "prevExperienceYes" type="radio" />
             <span class="per"> No </span>
       </label> </div>
+      
             <div class="col l1">
 
             </div>
@@ -99,6 +100,7 @@
             </div>
         </div>
     </div>
+   
     <div align="center" class="row">
         <h3>Commission free trades?</h3>
     </div>
@@ -110,7 +112,7 @@
             <div align="left" class="col l5 big button">
 
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question2" value = "commFreeTradeYes" type="radio" />
             <span class="per"> Yes </span>
       </label>
             </div>
@@ -119,7 +121,7 @@
             </div>
             <div align="left" class="col l5 big button">
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question2" value = "commFreeTradeNo" type="radio" />
             <span class="per"> No </span>
       </label> </div>
             <div class="col l1">
@@ -132,6 +134,7 @@
         </div>
     </div>
     <div align="center" class="row">
+       
 
         <h3>Connected Checking Account?</h3>
     </div>
@@ -143,7 +146,7 @@
             <div align="left" class="col l5 big button">
 
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question3" value = "connCheckingYes" type="radio" />
             <span class="per"> Yes </span>
       </label>
             </div>
@@ -152,8 +155,9 @@
             </div>
             <div align="left" class="col l5 big button">
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question3" value = "connCheckingNo" type="radio" />
             <span class="per"> No </span>
+
       </label> </div>
             <div class="col l1">
 
@@ -164,6 +168,7 @@
             </div>
         </div>
     </div>
+  
     <div align="center" class="row">
         <h3>Fees?</h3>
 
@@ -176,7 +181,7 @@
             <div align="left" class="col l5 big button">
 
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question4" value = "feesNo" type="radio" />
             <span class="per"> No Fees </span>
       </label>
             </div>
@@ -185,9 +190,10 @@
             </div>
             <div align="left" class="col l5 big button">
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question4" value = "feesYes" type="radio" />
             <span class="per"> Low Fees </span>
-      </label> </div>
+      </label> </div> 
+     
             <div class="col l1">
 
             </div>
@@ -211,7 +217,7 @@
             <div align="left" class="col l5 big button">
 
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question5" value = "taxLostHarvestingYes" type="radio" />
             <span class="per"> Yes </span>
       </label>
             </div>
@@ -220,9 +226,9 @@
             </div>
             <div align="left" class="col l5 big button">
                 <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question5" value = "taxLostHarvestingNo" type="radio" />
             <span class="per"> No </span>
-      </label> </div>
+      </label> </div> </form>
             <div class="col l1">
 
             </div>
@@ -235,7 +241,7 @@
     <i class="material-icons right">send</i>
   </button>
   </div>
-  </form>
+ 
     </div>
     </div>
     </div>

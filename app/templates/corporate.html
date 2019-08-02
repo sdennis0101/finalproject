@@ -41,14 +41,15 @@
         <div class="col l2 center tooltip">
             <!--<h5>Our Banks</h5>-->
             <!--<h5><a href="http://www.yahoo.com">Our Banks</a></h5> -->
-            <h5><a href="https://best-bank-app.herokuapp.com/ourbanks" style="color: #7A8080"> Our Banks</a></h5>
+            <h5><a href="https://best-bank-app.herokuapp.com/ourbanks
+            " style="color: #7A8080"> Our Banks</a></h5>
         </div>
         <div class="col l2">
 
         </div>
 
         <div class="col l1 tooltip">
-            <h5><a href="http://www.hyperlinkcode.com/change-hyperlink-color.php" style="color: #7A8080"> Creators </a></h5>
+            <h5><a href="https://best-bank-app.herokuapp.com/creators" style="color: #7A8080"> Creators </a></h5>
         </div>
         <div class="col l2">
 
@@ -65,7 +66,8 @@
             <h2> Are the following things important to you ?</h2>
         </div>
     </div>
-    <form>
+    <form method="post" action="whichBankForYouCorporate"> 
+
         <div align="center" class="row">
             <h3>Bank's Rating?</h3>
         </div>
@@ -77,7 +79,7 @@
                 <div align="left" class="col l5 big button">
 
                     <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question1" value = "ratingYes" type="radio" />
             <span class="per"> Yes </span>
       </label>
                 </div>
@@ -86,7 +88,7 @@
                 </div>
                 <div align="left" class="col l5 big button">
                     <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question1" value = "ratingNo" type="radio" />
             <span class="per"> No </span>
       </label> </div>
                 <div class="col l1">
@@ -109,7 +111,7 @@
                 <div align="left" class="col l5 big button">
 
                     <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question2" value = "branchesYes" type="radio" />
             <span class="per"> Yes </span>
       </label>
                 </div>
@@ -118,7 +120,7 @@
                 </div>
                 <div align="left" class="col l5 big button">
                     <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question2" value = "branchesNo" type="radio" />
             <span class="per"> No </span>
       </label> </div>
                 <div class="col l1">
@@ -142,7 +144,7 @@
                 <div align="left" class="col l5 big button">
 
                     <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question3" value = "costBusinessYes" type="radio" />
             <span class="per"> Yes </span>
       </label>
                 </div>
@@ -151,7 +153,7 @@
                 </div>
                 <div align="left" class="col l5 big button">
                     <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question3" value = "costBusinessNo" type="radio" />
             <span class="per"> No </span>
       </label> </div>
                 <div class="col l1">
@@ -175,7 +177,7 @@
                 <div align="left" class="col l5 big button">
 
                     <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question4" value = "businessCreditCardYes" type="radio" />
             <span class="per"> Yes </span>
       </label>
                 </div>
@@ -184,7 +186,7 @@
                 </div>
                 <div align="left" class="col l5 big button">
                     <label>
-        <input  class="with-gap form radio" name="group1" type="radio" />
+        <input  class="with-gap form radio" name="question4" value = "businessCreditCardNo" type="radio" />
             <span class="per"> No </span>
       </label> </div>
                 <div class="col l1">
