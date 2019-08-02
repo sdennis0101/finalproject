@@ -82,15 +82,15 @@ def whichBankForYouStocks():
         bestBankForYou = findGreatestPoints(chasePoints, morganStanleyPoints, boaPoints, wellsFargoPoints, goldmanPoints)
         print(bestBankForYou)
         if bestBankForYou == 'goldmansachs.html':
-            return render_template('goldmansachs.html')
+            return render_template('goldmansachs.html', name = theirName)
         elif bestBankForYou == 'morgstan.html':
-            return render_template('morganstan.html')
+            return render_template('morganstan.html', name = theirName)
         elif bestBankForYou == 'boa.html':
-            return render_template('boa.html')
+            return render_template('boa.html', name = theirName)
         elif bestBankForYou == 'wellsfargo.html':
-            return render_template('wellsfargo.html')
+            return render_template('wellsfargo.html', name = theirName)
         else:
-            return render_template('chase.html')
+            return render_template('chase.html', name = theirName)
         
         
         
@@ -127,15 +127,15 @@ def whichBankForYouCorporate():
         bestBankForYou = findGreatestPoints(chasePoints, morganStanleyPoints, boaPoints, wellsFargoPoints, goldmanPoints)
         print(bestBankForYou)
         if bestBankForYou == 'goldmansachs.html':
-            return render_template('goldmansachs.html')
+            return render_template('goldmansachs.html', name = theirName)
         elif bestBankForYou == 'morgstan.html':
-            return render_template('morganstan.html')
+            return render_template('morganstan.html', name = theirName)
         elif bestBankForYou == 'boa.html':
-            return render_template('boa.html')
+            return render_template('boa.html', name = theirName)
         elif bestBankForYou == 'wellsfargo.html':
-            return render_template('wellsfargo.html')
+            return render_template('wellsfargo.html', name = theirName)
         else:
-            return render_template('chase.html')
+            return render_template('chase.html', name = theirName)
         
         
         
@@ -180,15 +180,15 @@ def whichBankForYouPersonal():
         bestBankForYou = findGreatestPoints(chasePoints, morganStanleyPoints, boaPoints, wellsFargoPoints, goldmanPoints)
         print(bestBankForYou)
         if bestBankForYou == 'goldmansachs.html':
-            return render_template('goldmansachs.html')
+            return render_template('goldmansachs.html', name = theirName)
         elif bestBankForYou == 'morgstan.html':
-            return render_template('morganstan.html')
+            return render_template('morganstan.html', name = theirName)
         elif bestBankForYou == 'boa.html':
-            return render_template('boa.html')
+            return render_template('boa.html', name = theirName)
         elif bestBankForYou == 'wellsfargo.html':
-            return render_template('wellsfargo.html')
+            return render_template('wellsfargo.html', name = theirName)
         else:
-            return render_template('chase.html')
+            return render_template('chase.html', name = theirName)
         
         
         
