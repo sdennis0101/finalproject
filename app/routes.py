@@ -56,6 +56,7 @@ def whichBankForYouStocks():
         return render_template('index.html')
     else:
         userdata = request.form
+        theirName = userdata['name']
         q1Answers = userdata['question1']
         q2Answers = userdata['question2']
         q3Answers = userdata['question3']
@@ -103,6 +104,7 @@ def whichBankForYouCorporate():
         return render_template('index.html')
     else:
         userdata = request.form
+        theirName = userdata['name']
         q1Answers = userdata['question1']
         q2Answers = userdata['question2']
         q3Answers = userdata['question3']
@@ -150,6 +152,7 @@ def whichBankForYouPersonal():
         return render_template('index.html')
     else:
         userdata = request.form
+        theirName = userdata['name']
         q1Answers = userdata['question1']
         q2Answers = userdata['question2']
         q3Answers = userdata['question3']
