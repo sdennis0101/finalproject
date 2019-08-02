@@ -2,8 +2,38 @@ from app import app
 from flask import render_template, request
 from app.models import model
 
+
+
+@app.route('/')
+@app.route('/index', methods = ['GET', "POST"])
+def index():
+    return render_template('index.html')
+  
+@app.route('/routeToWhichPage', methods = ['GET','POST'])  
+def routeToWhichPage():
+    if request.method == 'GET':
+        
+        # return "how did you get here? go back to homepage! DEtonatIoN commences in 0.5 seconds"
+        return render_template('index.html')
+    else:
+        userdata = request.form
+        name = userdata['name']
+        pageTheyWant = userdata['bankingForWhat']
+        print(str(pageTheyWant))
+        if pageTheyWant == "personal":
+            return render_template('personal.html', name = name)
+        elif pageTheyWant == "corporate":
+            return render_template('corporate.html', name = name)
+        elif pageTheyWant == "stocks":
+            return render_template('stocks.html', name = name)
+        else:
+            return render_template('index.html')
+        
+  
 def findGreatestPoints(chasePoints, morganStanleyPoints, boaPoints, wellsFargoPoints, goldmanPoints):
     greatestPoints = 0
+    userdata = request.form
+    name = userdata['name']
     myList = [chasePoints, morganStanleyPoints, boaPoints, wellsFargoPoints, goldmanPoints]
     for element in myList:
         if element>greatestPoints:
@@ -22,47 +52,22 @@ def findGreatestPoints(chasePoints, morganStanleyPoints, boaPoints, wellsFargoPo
     
    
 
-@app.route('/')
-@app.route('/index', methods = ['GET', "POST"])
-def index():
-    return render_template('index.html')
   
-@app.route('/routeToWhichPage', methods = ['GET','POST'])  
-def routeToWhichPage():
-    if request.method == 'GET':
-        
-        # return "how did you get here? go back to homepage! DEtonatIoN commences in 0.5 seconds"
-        return render_template('index.html')
-    else:
-        userdata = request.form
-        theirName = userdata['name']
-        pageTheyWant = userdata['bankingForWhat']
-        print(str(pageTheyWant))
-        if pageTheyWant == "personal":
-            return render_template('personal.html', name = theirName)
-        elif pageTheyWant == "corporate":
-            return render_template('corporate.html', name = theirName)
-        elif pageTheyWant == "stocks":
-            return render_template('stocks.html', name = theirName)
-        else:
-            return render_template('index.html')
-        
-    
 @app.route('/whichBankForYouStocks', methods = ['GET','POST'])  
 def whichBankForYouStocks():
+    
     if request.method == 'GET':
         
         # return "how did you get here? go back to homepage! DEtonatIoN commences in 0.5 seconds"
         return render_template('index.html')
     else:
         userdata = request.form
-        theirName = userdata['name']
+        name = userdata['name']
         q1Answers = userdata['question1']
         q2Answers = userdata['question2']
         q3Answers = userdata['question3']
         q4Answers = userdata['question4']
         q5Answers = userdata['question5']
-        
         chasePoints = 0
         boaPoints = 0
         goldmanPoints = 0
@@ -82,16 +87,18 @@ def whichBankForYouStocks():
             
         bestBankForYou = findGreatestPoints(chasePoints, morganStanleyPoints, boaPoints, wellsFargoPoints, goldmanPoints)
         print(bestBankForYou)
+        name = userdata['name']
+        print (name)
         if bestBankForYou == 'goldmansachs.html':
-            return render_template('goldmansachs.html', name = theirName)
+            return render_template('goldmansachs.html',name = name)
         elif bestBankForYou == 'morgstan.html':
-            return render_template('morganstan.html', name = theirName)
+            return render_template('morganstan.html',name = name)
         elif bestBankForYou == 'boa.html':
-            return render_template('boa.html', name = theirName)
+            return render_template('boa.html', name = name)
         elif bestBankForYou == 'wellsfargo.html':
-            return render_template('wellsfargo.html', name = theirName)
+            return render_template('wellsfargo.html',name = name)
         else:
-            return render_template('chase.html', name = theirName)
+            return render_template('chase.html',name = name)
         
         
         
@@ -104,7 +111,7 @@ def whichBankForYouCorporate():
         return render_template('index.html')
     else:
         userdata = request.form
-        theirName = userdata['name']
+        name = userdata['name']
         q1Answers = userdata['question1']
         q2Answers = userdata['question2']
         q3Answers = userdata['question3']
@@ -129,15 +136,15 @@ def whichBankForYouCorporate():
         bestBankForYou = findGreatestPoints(chasePoints, morganStanleyPoints, boaPoints, wellsFargoPoints, goldmanPoints)
         print(bestBankForYou)
         if bestBankForYou == 'goldmansachs.html':
-            return render_template('goldmansachs.html', name = theirName)
+            return render_template('goldmansachs.html', name = name)
         elif bestBankForYou == 'morgstan.html':
-            return render_template('morganstan.html', name = theirName)
+            return render_template('morganstan.html', name = name)
         elif bestBankForYou == 'boa.html':
-            return render_template('boa.html', name = theirName)
+            return render_template('boa.html', name = name)
         elif bestBankForYou == 'wellsfargo.html':
-            return render_template('wellsfargo.html', name = theirName)
+            return render_template('wellsfargo.html', name = name)
         else:
-            return render_template('chase.html', name = theirName)
+            return render_template('chase.html', name = name)
         
         
         
@@ -152,7 +159,7 @@ def whichBankForYouPersonal():
         return render_template('index.html')
     else:
         userdata = request.form
-        theirName = userdata['name']
+        name = userdata['name']
         q1Answers = userdata['question1']
         q2Answers = userdata['question2']
         q3Answers = userdata['question3']
@@ -183,15 +190,15 @@ def whichBankForYouPersonal():
         bestBankForYou = findGreatestPoints(chasePoints, morganStanleyPoints, boaPoints, wellsFargoPoints, goldmanPoints)
         print(bestBankForYou)
         if bestBankForYou == 'goldmansachs.html':
-            return render_template('goldmansachs.html', name = theirName)
+            return render_template('goldmansachs.html', name = name)
         elif bestBankForYou == 'morgstan.html':
-            return render_template('morganstan.html', name = theirName)
+            return render_template('morganstan.html', name = name)
         elif bestBankForYou == 'boa.html':
-            return render_template('boa.html', name = theirName)
+            return render_template('boa.html', name = name)
         elif bestBankForYou == 'wellsfargo.html':
-            return render_template('wellsfargo.html', name = theirName)
+            return render_template('wellsfargo.html', name = name)
         else:
-            return render_template('chase.html', name = theirName)
+            return render_template('chase.html', name = name)
         
         
         

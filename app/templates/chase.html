@@ -15,11 +15,27 @@
 <head>
     <title>Best Banking</title>
     <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    
     <style>
         body {
             font-family: 'Darker Grotesque', sans-serif;
             font-size: 50px;
         }
+        
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
     </style>
 </head>
 
@@ -129,8 +145,44 @@ JPMC stock is a component of the Dow Jones Industrial Average.</h5>
     <!--    <input type="text" name="nickname" value="Enter your nickname"/>-->
     <!--    <input type="submit" value="Submit"/>-->
     <!--</form>-->
+    
+    <div id="map"></div>
+    <script>
+      var geocoder;
+      var map;
+      var address = "695 E Tremont Ave, The Bronx, NY 10457, USA";
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: {lat: -34.397, lng: 150.644}
+        });
+        geocoder = new google.maps.Geocoder();
+        codeAddress(geocoder, map);
+      }
+
+      function codeAddress(geocoder, map) {
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmlR7SUTV9tStVasjd3JhfT6rJ5gg2YCY
+&callback=initMap">
+    </script>
+    
 </body>
 <br>
+
+
 <h6>we are not resposible for any incorrect information. we're just kids. sorry bro</h6>
 </html>
 
